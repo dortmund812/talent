@@ -40,11 +40,16 @@
                                     <input type="password" class="form-control" id="password" name="password" aria-describedby="emailHelp" placeholder="Password">
                                 </div>
                                 <!-- Errors -->
-                                <?php if($error != ""): ?>
+                                <?php if ($error != "") : ?>
                                     <div class="form-group">
                                         <p class="text-danger"><?php echo $error; ?></p>
                                     </div>
                                 <?php endif; ?>
+                                <div class="form-group">
+                                    <?php foreach ($errorList as $err) : ?>
+                                        <p class="text-danger"><?php echo $err; ?></p>
+                                    <?php endforeach; ?>
+                                </div>
                                 <!-- Submit -->
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-success btn-block">Submit</button>
